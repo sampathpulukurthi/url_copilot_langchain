@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+readability-lxml
+lxml
+python-dotenv
+pydantic
+langchain==0.3.25
+langchain-openai
