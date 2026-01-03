@@ -87,9 +87,9 @@ url_copilot_langchain/
 
 ### Backend Setup
 
-### . Clone the repository
+### Clone the repository
 ```bash
-git clone https://github.com/<your-username>/url-copilot-langchain.git
+git clone https://github.com/sampathpulukurthi/url-copilot-langchain.git
 cd url-copilot-langchain
 
 1. Navigate to the backend directory:
