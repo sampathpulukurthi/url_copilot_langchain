@@ -1,18 +1,45 @@
-# URL Copilot with LangChain
+# URL Copilot – LangChain-Powered AI Assistant for Web Content
 
-A web application that extracts content from URLs, summarizes it using AI, and allows users to ask questions about the content. Built with FastAPI backend and React frontend, powered by LangChain and OpenAI.
+Overview
 
-## Features
+URL Copilot is a Generative AI application that transforms any public web URL into an intelligent, conversational knowledge source.
+It extracts, cleans, and indexes web content, enabling users to ask natural-language questions, generate summaries, and perform contextual Q&A using a Retrieval-Augmented Generation (RAG) architecture.
 
-- **URL Content Extraction**: Extract readable text from web pages using readability-lxml
-- **AI-Powered Summarization**: Generate summaries with bullet points and tags using LangChain
-- **Interactive Q&A**: Ask questions about extracted content with contextual awareness
-- **Session Management**: Maintain context across multiple interactions
-- **Modern UI**: Clean React frontend with Vite
+This project demonstrates how to design and build an end-to-end GenAI system using modern LLM orchestration patterns and production-ready backend APIs.
+
+## Problem Statement
+
+Web content is often lengthy, unstructured, and difficult to query efficiently.  
+Users typically want **specific answers or concise summaries**, not to manually read entire articles.
+
+Traditional search and keyword-based tools:
+- Lack contextual understanding
+- Do not support conversational follow-ups
+- Fail to synthesize insights across long documents
+
+## Solution 
+URL Copilot addresses this by:
+1. Extracting content from a given URL
+2. Cleaning and chunking text for semantic understanding
+3. Generating embeddings for efficient similarity search
+4. Storing embeddings in a vector database
+5. Using an LLM to generate grounded, context-aware responses
+6. Supporting multi-turn conversational queries
+
+
+## Key Features
+- 🔗 URL-based content ingestion
+- ✂️ Intelligent chunking for long documents
+- 🧠 Semantic search using embeddings
+- 💬 Multi-turn conversational Q&A
+- 📝 Automatic summarization
+- ⚡ RESTful API built with FastAPI
+- 🔌 Easily extensible to PDFs and enterprise knowledge sources
 
 ## Tech Stack
 
 ### Backend
+- **Python**
 - **FastAPI**: Modern Python web framework
 - **LangChain**: AI/LLM integration framework
 - **OpenAI**: Language model provider
@@ -59,6 +86,11 @@ url_copilot_langchain/
 - OpenAI API key
 
 ### Backend Setup
+
+### . Clone the repository
+```bash
+git clone https://github.com/<your-username>/url-copilot-langchain.git
+cd url-copilot-langchain
 
 1. Navigate to the backend directory:
 ```bash
@@ -114,25 +146,19 @@ The frontend will be available at `http://localhost:5173`
 3. Enter a URL to extract content
 4. Use the AI features to summarize or ask questions about the content
 
-## Environment Variables
 
-Create a `.env` file in the backend directory:
+### Future Enhancements
 
-```
-OPENAI_API_KEY=your_openai_api_key_here
-```
 
-## Development
+- Support for PDFs and multiple URLs
 
-### Backend Development
-- The backend uses FastAPI with automatic API documentation
-- Visit `http://localhost:8000/docs` for interactive API docs
-- Code is organized in modular files for easy maintenance
+- Reranking for improved retrieval accuracy
 
-### Frontend Development
-- React with TypeScript for type safety
-- Vite for fast development and building
-- ESLint for code quality
+- Conversation memory persistence
+
+- Authentication and user-specific knowledge bases
+
+- RAG evaluation using RAGAS or similar frameworks
 
 ## License
 
